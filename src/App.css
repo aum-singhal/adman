@@ -5,6 +5,7 @@
 
 :root{
   --background: #fff;
+  --sidebar-blue: #215273;
 }
 
 *{
@@ -42,6 +43,10 @@
 
 .semi-bold{font-weight: 600;}
 
+.flex-a-cen-j-spbet{display: flex;align-items: center;justify-content: space-between;}
+
+.flex-a-cen{display: flex;align-items: center;}
+
 .font-14{font-size: .875rem;}
 
 .font-16{font-size: 1rem;}
@@ -56,3 +61,7 @@
   opacity: 1;
   transition: opacity 250ms ease-in;
 }
+
+.border-d9d9d9{border: 1px solid #d9d9d9;}
+
+.border-radius-12{border-radius: .75rem;}

@@ -2,6 +2,7 @@ import React from 'react'
 import './clients.css';
 import { PageHeader } from '../../components/pageHeader/PageHeader';
 import { Table } from '../../components/table/Table';
+import { FilterBar } from '../../components/filterBar/FilterBar';
 
 export const Clients = () => {
     const tableData = {
@@ -16,6 +17,8 @@ export const Clients = () => {
 
     return <div className="clients">
         <PageHeader name={"Client Details"} />
+
+        <FilterBar name={"Create Client"} />
 
         <Table data={tableData} />
         
