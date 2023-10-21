@@ -1,19 +1,7 @@
 import './table.css';
 
 
-export const Table = () =>{
-
-    const data = {
-        head: ["Name", "Designation", "Contact", "Circle", "CMP", "Username", "Password", "Rights"],
-        body: [
-            {"Name": "ABC", "Designation": "DEF", "Contact":"99XXXXXX98", "Circle":"GHI", "CMP":"JKL", "Username":"MNOP", "Password":"xxxxxx", "Rights":"dssdkfal"},
-            {"Name": "ABC", "Designation": "DEF", "Contact":"99XXXXXX98", "Circle":"GHI", "CMP":"JKL", "Username":"MNOP", "Password":"xxxxxx", "Rights":"dssdkfal"},
-            {"Name": "ABC", "Designation": "DEF", "Contact":"99XXXXXX98", "Circle":"GHI", "CMP":"JKL", "Username":"MNOP", "Password":"xxxxxx", "Rights":"dssdkfal"},
-            {"Name": "ABC", "Designation": "DEF", "Contact":"99XXXXXX98", "Circle":"GHI", "CMP":"JKL", "Username":"MNOP", "Password":"", "Rights":"dssdkfal"},
-            {"Name": "ABC", "Designation": "DEF", "Contact":"99XXXXXX98", "Circle":"GHI", "CMP":"JKL", "Username":"MNOP", "Password":"xxxxxx", "Rights":"dssdkfal"},
-            {"Name": "ABC", "Designation": "DEF", "Contact":"99XXXXXX98", "Circle":"GHI", "CMP":"JKL", "Username":"MNOP", "Password":"xxxxxx", "Rights":"dssdkfal"},
-        ]
-    }
+export const Table = ({data}) =>{
 
     const dataKeys = Object.keys(data.body[0])
 
@@ -21,7 +9,7 @@ export const Table = () =>{
         <tr>
             {
                 data.head.map(item=>{
-                    return <th>{item}</th>
+                    return <th className='font-16 semi-bold'>{item}</th>
                 })
             }
         </tr>
@@ -31,7 +19,7 @@ export const Table = () =>{
                 return <tr>
                     {
                         dataKeys.map(i=>{
-                            return <td>{item[i]}</td>
+                            return <td className='font-14'>{item[i]}</td>
                         })
                     }
                 </tr>

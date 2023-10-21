@@ -5,10 +5,18 @@
 .table{
     width: 100%;
     border-collapse: collapse;
+    margin-top: 1rem;
 
-    :is(th){
-        background-color: #215273;
-        color: white;
+    :is(th, tr){
         padding: .5rem 0;
+        border-bottom: 1px solid #EEEEEE;
+    }
+
+    :is(td){
+        padding: .75rem 0;
+    }
+
+    :is(tr:last-child){
+        border-bottom: 0 solid;
     }
 }
