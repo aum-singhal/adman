@@ -1,0 +1,14 @@
+
+
+
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+
+    :is(th){
+        background-color: #215273;
+        color: white;
+        padding: .5rem 0;
+    }
+}

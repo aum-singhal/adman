@@ -1,0 +1,49 @@
+
+
+
+
+:root{
+  --background: #fff;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  overflow: hidden;
+  width: 100svw;
+  height: 100svh;
+
+  .left{
+    width: max(30vw,250px);
+    height: 100svh;
+  }
+
+  .right{
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    padding: 1rem 1.75rem;
+  }
+}
+
+.color-white{
+  color: white;
+}
+
+.color-black{
+  color: black; 
+}
+
+.medium-bold{
+  font-weight: 500;
+}
+
+.semi-bold{
+  font-weight: 600;
+}
