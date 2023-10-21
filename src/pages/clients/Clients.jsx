@@ -3,6 +3,7 @@ import './clients.css';
 import { PageHeader } from '../../components/pageHeader/PageHeader';
 import { Table } from '../../components/table/Table';
 import { FilterBar } from '../../components/filterBar/FilterBar';
+import { ZeroScreen } from '../../components/zeroScreen/ZeroScreen';
 
 export const Clients = () => {
     const tableData = {
@@ -14,13 +15,14 @@ export const Clients = () => {
             {"Name": "Good Day", "ID":"BREW 221014121014000", "Email Id":"xyz@gmail.com", "Mobile No.":"98XXXXXX76","Added By":"Aum Singhal" }
         ]
     }
+    // const tableData = {}
 
     return <div className="clients">
         <PageHeader name={"Client Details"} />
 
         <FilterBar name={"Create Client"} />
 
-        <Table data={tableData} />
+        {JSON.stringify(tableData) === "{}"?<ZeroScreen text={"There is no client entry yet"} />:<Table data={tableData} />}
         
     </div>
 }

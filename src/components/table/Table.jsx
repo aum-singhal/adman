@@ -7,14 +7,14 @@ export const Table = ({data}) =>{
 
     return <table className="table">
         <tr>
-            {
+            { data && 
                 data.head.map(item=>{
                     return <th className='font-16 semi-bold'>{item}</th>
                 })
             }
         </tr>
 
-        {
+        { data &&
             data.body.map(item=>{
                 return <tr>
                     {
