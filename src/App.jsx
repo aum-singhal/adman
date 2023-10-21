@@ -6,6 +6,9 @@ import { Clients } from './pages/clients/Clients';
 import { CSSTransition, SwitchTransition, TransitionGroup } from 'react-transition-group';
 import { Plans } from './pages/plans/Plans';
 import { Users } from './pages/users/Users';
+import { Advertisements } from './pages/advertisements/Advertisements';
+import { Shows } from './pages/shows/Shows';
+import { Reports } from './pages/reports/Reports';
 
 function App() {
   return (
@@ -20,9 +23,9 @@ function App() {
           <Route path='' element={<Clients />} />
           <Route path='/clients' element={<Clients />} />
           <Route path='/plans' element={<Plans />} />
-          <Route path='/advertisements' element={<Clients />} />
-          <Route path='/shows' element={<Clients />} />
-          <Route path='/reports' element={<Clients />} />
+          <Route path='/advertisements' element={<Advertisements />} />
+          <Route path='/shows' element={<Shows />} />
+          <Route path='/reports' element={<Reports />} />
           <Route path='/users' element={<Users />} />
         </Routes> 
       </div>
