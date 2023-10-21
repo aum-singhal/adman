@@ -38,6 +38,9 @@
             z-index: 10 !important;
             transition: .4s;
             position: relative;
+            display: flex;
+            gap: .75rem;
+            align-items: center;
         }
 
         .nav-item.selected{
