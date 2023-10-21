@@ -4,6 +4,7 @@ import { PageHeader } from '../../components/pageHeader/PageHeader';
 import { Table } from '../../components/table/Table';
 import { FilterBar } from '../../components/filterBar/FilterBar';
 import { ZeroScreen } from '../../components/zeroScreen/ZeroScreen';
+import { AnimatePage } from '../../components/animatepage';
 
 export const Clients = () => {
     const tableData = {
@@ -17,12 +18,11 @@ export const Clients = () => {
     }
     // const tableData = {}
 
-    return <div className="clients">
-        <PageHeader name={"Client Details"} />
-
-        <FilterBar name={"Create Client"} />
-
-        {JSON.stringify(tableData) === "{}"?<ZeroScreen text={"There is no client entry yet"} />:<Table data={tableData} />}
-        
-    </div>
+    return <AnimatePage>
+        <div className="clients">
+            <PageHeader name={"Client Details"} />
+            <FilterBar name={"Create Client"} />
+            {JSON.stringify(tableData) === "{}"?<ZeroScreen text={"There is no client entry yet"} />:<Table data={tableData} />}
+        </div>
+    </AnimatePage>
 }
