@@ -8,6 +8,7 @@
     padding: 2rem 0rem  2rem 1.25rem;
     background-color: var(--sidebar-blue);
     color: #F0F0F5;
+    --round-corner: 1.75rem;
 
     .heading{
         padding: 0 0 1.1rem 0;
@@ -41,6 +42,7 @@
             display: flex;
             gap: .75rem;
             align-items: center;
+            margin-top: 1rem;
         }
 
         .nav-item.selected{
@@ -60,10 +62,10 @@
             content: "";
             position: absolute;
             aspect-ratio: 1;
-            width: 1.5rem;
+            width: var(--round-corner);
             right: 0;
-            bottom: -1.5rem;
-            border-radius: 0 1.5rem 0 0;
+            bottom: calc(var(--round-corner) *-1);
+            border-radius: 0 var(--round-corner) 0 0;
             box-shadow: 6px -6px 0 3px var(--background);
         }
 
@@ -71,27 +73,27 @@
             content: "";
             position: absolute;
             aspect-ratio: 1;
-            width: 1.5rem;
+            width:var(--round-corner);
             right: 0;
-            top: -1.5rem;
-            border-radius: 0 0 1.5rem 0;
+            top: calc(var(--round-corner) *-1);
+            border-radius: 0 0 var(--round-corner) 0;
             box-shadow: 6px 6px 0 3px var(--background);
         }
 
         .nav-item:nth-child(2).selected ~ .hover-div{
-            transform: translateY(3rem);
+            transform: translateY(calc(4rem * 1));
         }
         .nav-item:nth-child(3).selected ~ .hover-div{
-            transform: translateY(6rem);
+            transform: translateY(calc(4rem * 2));
         }
         .nav-item:nth-child(4).selected ~ .hover-div{
-            transform: translateY(9rem);
+            transform: translateY(calc(4rem * 3));
         }
         .nav-item:nth-child(5).selected ~ .hover-div{
-            transform: translateY(12rem);
+            transform: translateY(calc(4rem * 4));
         }
         .nav-item:nth-child(6).selected ~ .hover-div{
-            transform: translateY(15rem);
+            transform: translateY(calc(4rem * 5));
         }
 
     }
