@@ -14,11 +14,11 @@ function App() {
   return (
     <div className="App">
 
-      <div className="left">
+      <div className="left-section">
         <Sidebar />
       </div>
 
-      <div className="right">
+      <div className="right-section">
         <Routes>
           <Route path='' element={<Clients />} />
           <Route path='/clients' element={<Clients />} />

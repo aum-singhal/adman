@@ -4,7 +4,7 @@ import filter from "../../assets/filterbar/filter.png";
 import search from "../../assets/filterbar/search.png";
 import expand from "../../assets/filterbar/expand.png";
 
-export const FilterBar = ({name}) => {
+export const FilterBar = ({name, disableCreate, setOpenForm}) => {
   return <div className="filter-bar flex-a-cen-j-spbet">
 
     <div className="flex-a-cen">
@@ -20,7 +20,7 @@ export const FilterBar = ({name}) => {
       </div>
     </div>
 
-    <button>{name}</button>
+    {disableCreate===true?"":<button onClick={()=>setOpenForm(true)}>{name}</button>}
 
   </div>
 }

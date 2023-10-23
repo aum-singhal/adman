@@ -22,12 +22,12 @@
   width: 100svw;
   height: 100svh;
 
-  .left{
+  .left-section{
     width: max(25vw,250px);
     height: 100svh;
   }
 
-  .right{
+  .right-section{
     width: 100%;
     min-height: 100svh;
     overflow: auto;
@@ -35,22 +35,26 @@
   }
 }
 
-.color-white{color: white;}
+.text-title{text-transform: capitalize;}
+.text-right{text-align: right;}
 
+
+.color-blue{color: var(--sidebar-blue)}
+.color-white{color: white;}
 .color-black{color: black; }
 
 .medium-bold{font-weight: 500;}
-
 .semi-bold{font-weight: 600;}
 
-.flex-a-cen-j-spbet{display: flex;align-items: center;justify-content: space-between;}
+.cursor-pointer{cursor: pointer;}
 
+.flex-a-cen-j-spbet{display: flex;align-items: center;justify-content: space-between;}
 .flex-a-cen{display: flex;align-items: center;}
 
 .font-14{font-size: .875rem;}
-
 .font-16{font-size: 1rem;}
-
+.font-18{font-size: 1.125rem;}
+.font-20{font-size: 1.5rem;}
 .font-22{font-size: 1.375rem;}
 
 .fade-enter {

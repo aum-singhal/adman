@@ -6,14 +6,14 @@ export const AnimatePage = ({children}) => {
   const animations = {
     initial: {opacity: 0.2},
     animate: {opacity: 1},
-    exit: {opacity: 0}
+    exit: {opacity: .5}
   }
   return <motion.div 
     variants={animations}
     initial="initial"
     animate="animate"
     exit="exit"
-    transition={{duration: .6, ease: "easeInOut"}}
+    transition={{duration: .4, ease: "easeInOut"}}
   >
     {children}
   </motion.div>
