@@ -30,7 +30,7 @@ export const OverlayForm = ({data, title, setOpenForm}) => {
       <div className="input-area">
         {
           Object.keys(data).map(key =>{
-            return <div className="inputs" key={key}>
+            return <div className="inputs flex-a-cen" key={key}>
 
               <div className="left font-16 medium-bold text-title">
                 {
