@@ -4,7 +4,11 @@ import filter from "../../assets/filterbar/filter.png";
 import search from "../../assets/filterbar/search.png";
 import expand from "../../assets/filterbar/expand.png";
 
-export const FilterBar = ({name, disableCreate, setOpenForm}) => {
+export const FilterBar = ({name, disableCreate, setOpenForm, redirect, func}) => {
+  const onClickFunc = () => {
+    if(redirect===true){func()}
+    else{setOpenForm(true)}
+  } 
   return <div className="filter-bar flex-a-cen-j-spbet">
 
     <div className="flex-a-cen">
@@ -20,7 +24,7 @@ export const FilterBar = ({name, disableCreate, setOpenForm}) => {
       </div>
     </div>
 
-    {disableCreate===true?"":<button onClick={()=>setOpenForm(true)}>{name}</button>}
+    {disableCreate===true?"":<button onClick={onClickFunc}>{name}</button>}
 
   </div>
 }

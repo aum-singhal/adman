@@ -37,7 +37,7 @@
 
 .text-title{text-transform: capitalize;}
 .text-right{text-align: right;}
-
+.text-align-left{text-align: left;}
 
 .color-blue{color: var(--sidebar-blue)}
 .color-white{color: white;}
@@ -48,14 +48,21 @@
 
 .cursor-pointer{cursor: pointer;}
 
+.gap-05{gap: .5rem;}
+
+.flex{display: flex;}
 .flex-a-cen-j-spbet{display: flex;align-items: center;justify-content: space-between;}
 .flex-a-cen{display: flex;align-items: center;}
+.flex-a-cen-j-fend{display: flex;align-items: center;justify-content: flex-end;}
+.flex-a-cen-j-cen{display: flex;align-items: center; justify-content: center;}
 
+.font-12{font-size: .75rem;}
 .font-14{font-size: .875rem;}
 .font-16{font-size: 1rem;}
 .font-18{font-size: 1.125rem;}
 .font-20{font-size: 1.5rem;}
 .font-22{font-size: 1.375rem;}
+.font-48{font-size: 3rem;}
 
 .fade-enter {
   opacity: 0;
@@ -69,3 +76,7 @@
 .border-d9d9d9{border: 1px solid #d9d9d9;}
 
 .border-radius-12{border-radius: .75rem;}
+
+.cursor-pointer{
+  cursor: pointer;
+}
