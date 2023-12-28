@@ -1,0 +1,39 @@
+
+
+.create-report{
+
+  .report-gen{
+    display: flex;
+    height: 100%;
+    
+    .left{
+      width: 60%;
+    }
+  
+    .right{
+      width: 40%;
+      background-color: #F0F3F7;
+      height: 100%;
+      position: relative;
+      padding: 2rem;
+      right: -1.75rem;
+      top: -1px; 
+
+      .report-sec{
+        padding: 1rem .5rem;
+        background-color: white;
+        position: relative;
+
+      }::after{
+        content: "Report preview";
+        position: absolute;
+        left: 0;
+        top: -1.2rem;
+        font-size: .75rem;
+        color: rgba(106, 127, 132, 0.80);
+      }
+
+    }
+  }
+
+}

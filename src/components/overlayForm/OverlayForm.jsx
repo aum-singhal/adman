@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./OverlayForm.css";
 
 import close from "../../assets/icons/close.png";
@@ -6,12 +6,18 @@ import close from "../../assets/icons/close.png";
 
 export const OverlayForm = ({data, title, setOpenForm}) => {
   const nodeRef = useRef(null);
+  const inputFileRef = useRef(null);
+  const [prev, setPrev] = useState(false);
+
   const handleClickOutside = event =>{
-    if(nodeRef.current && 
-      !nodeRef.current.contains(event.target)) {
-        return setOpenForm(false);
-      }
-    };
+    if(nodeRef.current && !nodeRef.current.contains(event.target)) {
+      return setOpenForm(false);
+    }
+  };
+
+  const openFile = () =>{
+    inputFileRef.current.click();
+  }
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
@@ -35,14 +41,29 @@ export const OverlayForm = ({data, title, setOpenForm}) => {
               <div className="left font-16 medium-bold text-title">
                 {
                   data[key]["line"]==="text"?(
-                    <span className="font-18">{data[key]['left']}</span>
+                    <span className="font-18 medium-bold">{data[key]['left']}</span>
+                  ):data[key]["line"]==="heading"?(
+                    <span className="font-18 medium-bold">{data[key]["title"]}</span>
                   ):data[key]["title"]
                 }
               </div>
 
               <div className="right">
                 {
-                  data[key]["line"]==="single"?(
+                  data[key]["line"]==="heading"? "" : data[key]["type"]==="upload"?(
+                    <div className="upload-file">
+                      <div className="top">
+                        <input type="file" name="" id="" ref={inputFileRef} onChange={()=>setPrev(true)} style={{"display":"none"}} />
+                        <button onClick={()=>openFile()}>Choose a file</button>
+                        <span className="font-14 medium-bold"></span>
+                      </div>
+                        {/* {inputFileRef.current.value===""? "" : <video width={"400"} controls>
+                          <source src={URL.createObjectURL(inputFileRef.current.value)}/>
+                        </video>} */}
+                        {prev === false? "" : <video width={"400"} controls>
+                          <source src={window.URL.createObjectURL(new Blob(inputFileRef.current.value, {type: "video/mp4"}))} /></video>}
+                    </div>
+                  ) : data[key]["line"]==="single"?(
                     <input 
                       maxLength={data[key]['max_limit']===0?"":data[key]['max_limit']} 
                       required 

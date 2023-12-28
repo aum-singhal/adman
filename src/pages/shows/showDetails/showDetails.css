@@ -1,0 +1,138 @@
+
+
+
+
+.show-details{
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+
+  .container{
+    border: 1px solid #d9d9d9;
+    display: flex;
+    padding: 1.5rem 1.25rem;
+    border-radius: .25rem;
+
+    .left, .right{
+      width: 100%;
+    }
+
+    .left{
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      
+      .field{
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        padding-right: 2rem;
+
+        .font-14{
+          grid-column: 1;
+          text-align: left;
+        }
+
+        .font-12{
+          color: var(--sidebar-blue);
+        }
+
+        :is(input){
+          border: 1px solid #dfdfdf;
+          border-radius: .25rem;
+          background-color: #fafafa;
+          padding: .825rem .625rem;
+        }
+      }
+    }
+
+    .right{
+      padding-left: 5rem;
+      padding-right: 2rem;
+
+      .preview{
+        width: 100%;
+        height: 15rem;
+        border-radius: 1rem;
+        background-color: gray;
+        
+      }
+    }
+  }
+
+  :is(button){
+    width: 9.25rem;
+    margin-left: auto;
+    height: 2.25rem;
+    border-radius: .25rem;
+    background-color: var(--sidebar-blue);
+    color: white;
+    border: 0 solid;
+    font-size: .75rem;
+    font-weight: 500;
+  }
+}
+
+.create-heirarchy{
+  text-align: left;
+
+  .font-22{
+    margin: 1rem 0 .5rem 0;
+  }
+
+  .container-border{
+    border-radius: .25rem;
+    border: 1px solid #d9d9d9;
+    padding: 1.5rem;
+    text-align: left;
+
+    .container{
+      width: 100%;
+      gap: 4rem; 
+
+
+      .left, .right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+
+        .field{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          align-items: center;
+
+          .dropdown{
+            width: 21rem;
+            height: 2rem;
+            background-color: #fafafa;
+            padding: .5rem .75rem;
+            border: 1px solid #dfdfdf;
+            border-radius: .25rem;
+          }
+        }
+      }
+    }
+  }
+
+  :is(button){
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sidebar-blue);
+    color: white;
+    padding: .75rem 0;
+    border: 0 solid;
+    border-radius: .25rem;
+    color: var(--colors-white, #FFF);
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.144px;
+    margin-top: 1rem;
+    margin-left: auto;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
