@@ -4,25 +4,49 @@
 
   .report-gen{
     display: flex;
-    height: 100%;
+    min-height: 80svh;
     
     .left{
       width: 60%;
+
+      .name{
+        margin-top: 1.25rem;
+        :is(input){
+          width: 100%;
+          border-radius: .25rem;
+          border: 1px solid #d9d9d9;
+          padding: .4rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .filter{
+        color: #317BC8;
+      }
+
+      .report-fields{
+        border: 1px solid #d9d9d9;
+        border-radius: .25rem;
+        padding: 1.5rem .75rem;
+        gap: 6.6rem;
+        display: flex;
+        flex-direction: column;
+      }
     }
   
     .right{
       width: 40%;
       background-color: #F0F3F7;
-      height: 100%;
       position: relative;
-      padding: 2rem;
+      padding: 2.75rem 2.1875rem 3.75rem 2.1875rem;
       right: -1.75rem;
-      top: -1px; 
+      top: -1px;
 
       .report-sec{
         padding: 1rem .5rem;
         background-color: white;
         position: relative;
+        height: 100%;
 
       }::after{
         content: "Report preview";
@@ -33,6 +57,32 @@
         color: rgba(106, 127, 132, 0.80);
       }
 
+    }
+  }
+
+  .buttons{
+    display: flex;
+    gap: 2.25rem;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+
+    :is(button){
+      font-size: .75em;
+      font-weight: 600;
+      min-width: 9.25rem;
+      border: 0 solid;
+      border-radius: .25rem;
+      padding: .75rem .625rem;
+    }
+
+    .cancel{
+      border: 1px solid var(--sidebar-blue);
+    }
+
+    .create{
+      background-color: var(--sidebar-blue);
+      color: white;
     }
   }
 
